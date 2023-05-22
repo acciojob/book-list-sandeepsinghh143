@@ -14,7 +14,7 @@ input{
 	height:30px;
 	width:100%;
 }
-button{
+#submit{
 	background-color:#1877F2;
 	color:white;
 	padding:6px;
@@ -45,4 +45,9 @@ th{
 }
 td,th{
 	padding:10px 5px;
+}
+.delete{
+	background-color:red;
+	border:none;
+	padding:2px;
 }
