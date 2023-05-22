@@ -21,15 +21,28 @@ button{
 	border-radius:3px;
 	border:0px;
 }
-.table{
-	margin-top:40px;
+button:hover{
+	cursor:pointer;
 }
-
 table{
+	margin-top:40px;
 	width:100%;
+	border-collapse:collapse;
 }
-
+tr{
+	border-bottom:2px solid #B0B0B0;
+}
+tr.border{
+	border-bottom:2px solid black;
+}
+tr{
+	background-color:#F8F8F8;
+}
 th{
+	background-color:white;
 	width:27%;
 	text-align:left;
+}
+td,th{
+	padding:10px 5px;
 }
