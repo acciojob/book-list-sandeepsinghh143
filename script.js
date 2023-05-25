@@ -4,8 +4,9 @@ document.getElementById("submit").addEventListener("click", function(event) {
       addBookToList();
     });
 let tbody=document.getElementById("book-list");
-function addBookToList(){
+function addBookToList(event){
 	let row=tbody.insertRow();
+	tbody.append(row);
 	let td1=row.insertCell(0);
 	td1.innerText=document.getElementById("title").value;
 	let td2=row.insertCell(1);
@@ -16,18 +17,17 @@ function addBookToList(){
 	let newBtn = document.createElement('button');
 	newBtn.className="delete";
     newBtn.innerText = 'X';
-	td4.append(newBtn);
 	row.append(td1);
 	row.append(td2);
 	row.append(td3);
 	row.append(td4);
-	tbody.append(row);
+	td4.append(newBtn);
+	
 	
 }
 var deleteButtons = document.getElementsByClassName("delete");
       for (var i = 0; i < deleteButtons.length; i++) {
-        deleteButtons[i].addEventListener("click", function() {
-          var row = this.parentNode.parentNode;
-          row.parentNode.removeChild(row);
+        deleteButtons[i].addEventListener("click", function(event) {
+          event.target.parentNode.parentNode.remove();
         });
       }
