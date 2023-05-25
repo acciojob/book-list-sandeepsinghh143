@@ -17,19 +17,17 @@ function addBookToList(){
 	newBtn.className="delete";
     newBtn.innerText = 'X';
 	td4.append(newBtn);
-	tr.append(td1);
-	tr.append(td2);
-	tr.append(td3);
-	tr.append(td4);
-	tbody.append(tr);
-      document.getElementById("title").value = "";
-      document.getElementById("author").value = "";
-      document.getElementById("isbn").value = ""
-	var deleteButtons = document.getElementsByClassName("delete");
+	row.append(td1);
+	row.append(td2);
+	row.append(td3);
+	row.append(td4);
+	tbody.append(row);
+	
+}
+var deleteButtons = document.getElementsByClassName("delete");
       for (var i = 0; i < deleteButtons.length; i++) {
         deleteButtons[i].addEventListener("click", function() {
           var row = this.parentNode.parentNode;
           row.parentNode.removeChild(row);
         });
       }
-}
